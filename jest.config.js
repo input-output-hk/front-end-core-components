@@ -1,7 +1,9 @@
 module.exports = {
   transform: {
-    '^.+\\.(t|j)sx?$': `<rootDir>/jest/preprocess.js`
+    '^.+\\.(t|j)sx?$': '<rootDir>/jest/preprocess.js'
   },
-  testPathIgnorePatterns: [ `node_modules` ],
-  transformIgnorePatterns: [ `node_modules/.*/` ]
+  setupFilesAfterEnv: [ '<rootDir>/jest/setup.js' ],
+  testPathIgnorePatterns: [ 'node_modules' ],
+  transformIgnorePatterns: [ 'node_modules/.*/' ],
+  snapshotSerializers: [ 'enzyme-to-json/serializer' ]
 }

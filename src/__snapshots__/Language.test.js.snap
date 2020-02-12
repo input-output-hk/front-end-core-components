@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Language context <Consumer /> the consumer values are correct 1`] = `
+Object {
+  "availableLanguages": Array [
+    Object {
+      "flag": "‎🇺🇸",
+      "key": "en",
+      "label": "US English",
+      "locale": "en-US",
+    },
+    Object {
+      "flag": "‎🇫🇷",
+      "key": "fr",
+      "label": "French",
+      "locale": "fr-FR",
+    },
+  ],
+  "flag": "‎🇺🇸",
+  "label": "US English",
+  "lang": "en",
+  "locale": "en-US",
+  "setLang": [Function],
+}
+`;
+
+exports[`Language context <Consumer /> when setLang is called the consumer values are correctly updated 1`] = `
+Object {
+  "availableLanguages": Array [
+    Object {
+      "flag": "‎🇺🇸",
+      "key": "en",
+      "label": "US English",
+      "locale": "en-US",
+    },
+    Object {
+      "flag": "‎🇫🇷",
+      "key": "fr",
+      "label": "French",
+      "locale": "fr-FR",
+    },
+  ],
+  "flag": "‎🇫🇷",
+  "label": "French",
+  "lang": "fr",
+  "locale": "fr-FR",
+  "setLang": [Function],
+}
+`;
+
+exports[`Language context <Provider /> it renders the provider component correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "alternativeLanguages": Array [],
+      "availableLanguages": Array [
+        Object {
+          "flag": "‎🇺🇸",
+          "key": "en",
+          "label": "US English",
+          "locale": "en-US",
+        },
+        Object {
+          "flag": "‎🇫🇷",
+          "key": "fr",
+          "label": "French",
+          "locale": "fr-FR",
+        },
+      ],
+      "flag": "‎🇺🇸",
+      "label": "US English",
+      "lang": "en",
+      "locale": "en-US",
+      "setLang": [Function],
+    }
+  }
+>
+  <p>
+    Language provider children
+  </p>
+</ContextProvider>
+`;

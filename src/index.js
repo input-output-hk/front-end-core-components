@@ -1,3 +1,5 @@
-export default () => {
-  return null
+import * as Language from './Language'
+
+export {
+  Language
 }

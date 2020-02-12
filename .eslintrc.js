@@ -1,3 +1,5 @@
+const { peerDependencies } = require('./package.json')
+
 module.exports =  {
   parser:  'babel-eslint',
   extends:  [
@@ -11,7 +13,7 @@ module.exports =  {
     'jest'
   ],
   rules:  {
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': [ 'error', { ignore: Object.keys(peerDependencies) } ],
     'import/named': 'error',
     'import/namespace': 'error',
     'import/default': 'error',

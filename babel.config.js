@@ -1,5 +1,6 @@
 const presets = [
-  '@babel/env'
+  '@babel/preset-env',
+  '@babel/preset-react'
 ]
 
 const plugins = [
@@ -7,7 +8,8 @@ const plugins = [
 ]
 
 const ignore = [
-  '**/*.test.js'
+  '**/*.test.js',
+  '**/*.test.js.snap'
 ]
 
 module.exports = {
