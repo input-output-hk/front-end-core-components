@@ -29,12 +29,13 @@ const DEFAULT_PROVIDER_PROPS = {
 function getProviderWrapper ({ props = {}, renderFunction }) {
   return renderFunction(
     <Provider
-      location={{ ...DEFAULT_PROVIDER_PROPS.location, ...(props.location || {}) }}
+      location={props.location === null ? undefined : { ...DEFAULT_PROVIDER_PROPS.location, ...(props.location || {}) }}
       availableLanguages={props.availableLanguages || DEFAULT_PROVIDER_PROPS.availableLanguages}
       alternativeLanguages={props.alternativeLanguages}
       onUpdate={props.onUpdate}
       persistLang={props.persistLang}
       useNavigator={props.useNavigator}
+      useURL={props.useURL}
     >
       {props.children ? props.children : DEFAULT_PROVIDER_PROPS.children}
     </Provider>
@@ -92,6 +93,28 @@ describe('Language context', () => {
 
         test('the language is not persisted to local storage', () => {
           expect(window.localStorage.setItem).not.toBeCalled()
+        })
+      })
+
+      describe('when useURL is false', () => {
+        beforeEach(() => {
+          onUpdate.mockReset()
+          provider = getProviderWrapper({ renderFunction: mount, props: { onUpdate, useURL: false, location: null } })
+        })
+
+        test('onUpdate is called with the correct arguments', () => {
+          expect(onUpdate).toBeCalledWith({ lang: 'en', prevLang: null })
+        })
+
+        describe('when location is still used', () => {
+          beforeEach(() => {
+            onUpdate.mockReset()
+            provider = getProviderWrapper({ renderFunction: mount, props: { onUpdate, useURL: false, location: { pathname: '/fr/' } } })
+          })
+
+          test('onUpdate is called with the correct arguments', () => {
+            expect(onUpdate).toBeCalledWith({ lang: 'en', prevLang: null })
+          })
         })
       })
 

@@ -18,7 +18,7 @@ Object {
   ],
   "flag": "‎🇺🇸",
   "label": "US English",
-  "lang": "en",
+  "lang": undefined,
   "locale": "en-US",
   "setLang": [Function],
 }
@@ -42,7 +42,7 @@ Object {
   ],
   "flag": "‎🇫🇷",
   "label": "French",
-  "lang": "fr",
+  "lang": undefined,
   "locale": "fr-FR",
   "setLang": [Function],
 }
@@ -68,8 +68,8 @@ exports[`Language context <Provider /> it renders the provider component correct
         },
       ],
       "flag": "‎🇺🇸",
+      "key": "en",
       "label": "US English",
-      "lang": "en",
       "locale": "en-US",
       "setLang": [Function],
     }
