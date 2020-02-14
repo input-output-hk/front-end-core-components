@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Head /> it renders children components correctly 1`] = `
+<Helmet
+  defer={true}
+  encodeSpecialCharacters={true}
+  meta={Array []}
+  title=""
+>
+  <html
+    lang="en"
+  />
+</Helmet>
+`;
+
+exports[`<Head /> it renders correctly with minimal props 1`] = `
+<Helmet
+  defer={true}
+  encodeSpecialCharacters={true}
+  meta={Array []}
+  title=""
+/>
+`;
+
+exports[`<Head /> it renders lang correctly 1`] = `
+<Helmet
+  defer={true}
+  encodeSpecialCharacters={true}
+  meta={Array []}
+  title=""
+>
+  <html
+    lang="en"
+  />
+</Helmet>
+`;
+
+exports[`<Head /> it renders locales correctly 1`] = `
+<Helmet
+  defer={true}
+  encodeSpecialCharacters={true}
+  meta={
+    Array [
+      Object {
+        "content": "en-GB",
+        "property": "og:locale:alternate",
+      },
+      Object {
+        "content": "fr-FR",
+        "property": "og:locale:alternate",
+      },
+    ]
+  }
+  title=""
+/>
+`;
+
+exports[`<Head /> it renders tags based on levels correctly 1`] = `
+<Helmet
+  defer={true}
+  encodeSpecialCharacters={true}
+  meta={
+    Array [
+      Object {
+        "content": "Component OG title",
+        "property": "og:title",
+      },
+      Object {
+        "content": "my,website,site",
+        "name": "keywords",
+      },
+      Object {
+        "content": "Page description",
+        "name": "description",
+      },
+      Object {
+        "content": "Share on Twitter!",
+        "name": "twitter:title",
+      },
+      Object {
+        "content": "https://www.images.com/relative/image.jpeg",
+        "name": "twitter:image",
+      },
+      Object {
+        "content": "My image",
+        "name": "twitter:image:alt",
+      },
+      Object {
+        "content": "https://www.images.com/image.jpeg",
+        "property": "og:image",
+      },
+    ]
+  }
+  title="Page title"
+/>
+`;
