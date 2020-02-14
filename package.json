@@ -62,7 +62,8 @@
   },
   "peerDependencies": {
     "react": "^16.3.0",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "react-helmet-async": "^1.0.4"
   },
   "homepage": "https://github.com/input-output-hk/front-end-core-components#readme"
 }
