@@ -71,15 +71,14 @@ const Provider = ({
    *
    * @returns {Object}
    */
-  function getThemeConfig () {
-    return (themes.filter(({ key }) => key === theme).shift() || {}).config
+  function getTheme () {
+    return (themes.filter(({ key }) => key === theme).shift() || {})
   }
 
   return (
     <ThemeContext.Provider
       value={{
-        key: theme,
-        theme: getThemeConfig(),
+        theme: getTheme(),
         setTheme,
         themes
       }}

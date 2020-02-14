@@ -6,12 +6,13 @@ const Consumer = LanguageContext.Consumer
 
 const Provider = ({
   children,
-  location: { pathname, search, hash },
+  location: { pathname, search, hash } = {},
   availableLanguages,
   alternativeLanguages = [],
   onUpdate = ({ lang, prevLang, url, prevURL }) => {},
   persistLang = true,
-  useNavigator = true
+  useNavigator = true,
+  useURL = true
 }) => {
   const [ lang, setLanguage ] = useState(resolveLanguage(getDefaultLanguage()))
 
@@ -35,7 +36,7 @@ const Provider = ({
    * @returns {String} Language key
    */
   function getDefaultLanguage () {
-    const urlLang = getURLLang()
+    const urlLang = useURL ? getURLLang() : ''
     // Use URL language where available
     if (isValidLanguage(urlLang)) return urlLang
     // Fallback to local storage or default config
@@ -123,7 +124,17 @@ const Provider = ({
 
   useEffect(() => {
     persistToLocalStorage(lang)
-    onUpdate({ lang, prevLang: null, url: getURL(lang), prevURL: null })
+    const updateArgs = {
+      lang,
+      prevLang: null
+    }
+
+    if (useURL) {
+      updateArgs.url = getURL(lang)
+      updateArgs.prevURL = null
+    }
+
+    onUpdate(updateArgs)
   }, [])
 
   /**
@@ -135,14 +146,25 @@ const Provider = ({
   function setLang (language) {
     if (!isValidLanguage(language)) throw new Error(`Invalid language ${language}`)
     persistToLocalStorage(language)
-    onUpdate({ lang: language, prevLang: lang, url: getURL(language), prevURL: `${pathname}${search}${hash}` })
+
+    const updateArgs = {
+      lang: language,
+      prevLang: lang
+    }
+
+    if (useURL) {
+      updateArgs.url = getURL(language)
+      updateArgs.prevURL = `${pathname}${search}${hash}`
+    }
+
+    onUpdate(updateArgs)
     setLanguage(language)
   }
 
   return (
     <LanguageContext.Provider
       value={{
-        lang,
+        key: lang,
         setLang,
         locale: getLanguage(lang).locale,
         flag: getLanguage(lang).flag,
@@ -158,11 +180,17 @@ const Provider = ({
 
 Provider.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-    search: PropTypes.string.isRequired,
-    hash: PropTypes.string.isRequired
-  }).isRequired,
+  location: (props, propName, componentName) => {
+    const requiredKeys = [ 'pathname', 'search', 'hash' ]
+    if (props.useURL && (!props[propName] || typeof props[propName] !== 'object' || Array.isArray(props[propName]))) {
+      return new Error(`When 'useURL' is true, location must be provided as an object with location.pathname, location.search and location.hash`)
+    } else if (props.useURL) {
+      while (requiredKeys.length > 0) {
+        const key = requiredKeys.shift()
+        if (typeof props[propName][key] !== 'string') return new Error(`location.${key} must be a string`)
+      }
+    }
+  },
   availableLanguages: PropTypes.arrayOf(PropTypes.shape({
     key: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
@@ -175,7 +203,8 @@ Provider.propTypes = {
   })),
   onUpdate: PropTypes.func,
   persistLang: PropTypes.bool,
-  useNavigator: PropTypes.bool
+  useNavigator: PropTypes.bool,
+  useURL: PropTypes.bool
 }
 
 export {
