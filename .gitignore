@@ -68,5 +68,5 @@ yarn.lock
 .vscode
 
 # Build
-build
+components
 .cache/

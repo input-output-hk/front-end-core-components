@@ -2,10 +2,10 @@
   "name": "@input-output-hk/front-end-core-components",
   "version": "0.0.1",
   "description": "IOHK front-end web core React components",
-  "main": "build/index.js",
+  "main": "components/index.js",
   "scripts": {
-    "build": "npm run clean && babel src --out-dir build --source-maps inline",
-    "clean": "rm -rf ./build",
+    "build": "npm run clean && babel src --out-dir components --source-maps inline",
+    "clean": "rm -rf ./components",
     "lint": "eslint src/**/*.js",
     "install-peers": "npm-install-peers",
     "prepublish": "npm run build",
@@ -30,7 +30,7 @@
   ],
   "files": [
     "/src",
-    "/build",
+    "/components",
     "README.md"
   ],
   "devDependencies": {
