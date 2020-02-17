@@ -34,6 +34,7 @@ yarn add @input-output-hk/front-end-core-components
 
 ## Components
 
-* [Language](docs/components/Language.md)
-* [Theme](docs/components/Theme.md)
 * [Head](docs/components/Head.md)
+* [Language](docs/components/Language.md)
+* [Link](docs/components/Link.md)
+* [Theme](docs/components/Theme.md)
