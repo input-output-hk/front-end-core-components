@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> it renders correctly with minimal props 1`] = `
+<Provider>
+  <ForwardRef
+    href="/"
+  >
+    <LinkInner
+      href="/"
+      isStatic={[Function]}
+      lang=""
+    >
+      <a
+        data={
+          Object {
+            "isRelative": true,
+            "isStatic": false,
+          }
+        }
+        href="/"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when the context provider has a lang set absolute URL's are unaffected 1`] = `
+<Provider
+  lang="en"
+>
+  <ForwardRef
+    href="https://site.com/page/"
+  >
+    <LinkInner
+      href="https://site.com/page/"
+      isStatic={[Function]}
+      lang="en"
+    >
+      <a
+        data={
+          Object {
+            "isRelative": false,
+            "isStatic": false,
+          }
+        }
+        href="https://site.com/page/"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when the context provider has a lang set already language prefixed URL's are unaffected 1`] = `
+<Provider
+  lang="en"
+>
+  <ForwardRef
+    href="/en/page/"
+  >
+    <LinkInner
+      href="/en/page/"
+      isStatic={[Function]}
+      lang="en"
+    >
+      <a
+        data={
+          Object {
+            "isRelative": true,
+            "isStatic": false,
+          }
+        }
+        href="/en/page/"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when the context provider has a lang set it prefixes the URL with the lang 1`] = `
+<Provider
+  lang="en"
+>
+  <ForwardRef
+    href="/page/"
+  >
+    <LinkInner
+      href="/page/"
+      isStatic={[Function]}
+      lang="en"
+    >
+      <a
+        data={
+          Object {
+            "isRelative": true,
+            "isStatic": false,
+          }
+        }
+        href="/en/page/"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when the context provider has a lang set when validation for static URL's are in place non-static URL's are prefixed with the language 1`] = `
+<Provider
+  isStatic={[Function]}
+  lang="en"
+>
+  <ForwardRef
+    href="/non-static/page/"
+  >
+    <LinkInner
+      href="/non-static/page/"
+      isStatic={[Function]}
+      lang="en"
+    >
+      <a
+        data={
+          Object {
+            "isRelative": true,
+            "isStatic": false,
+          }
+        }
+        href="/en/non-static/page/"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when the context provider has a lang set when validation for static URL's are in place static URL's are unaffected 1`] = `
+<Provider
+  isStatic={[Function]}
+  lang="en"
+>
+  <ForwardRef
+    href="/images/myimage.jpeg"
+  >
+    <LinkInner
+      href="/images/myimage.jpeg"
+      isStatic={[Function]}
+      lang="en"
+    >
+      <a
+        data={
+          Object {
+            "isRelative": true,
+            "isStatic": true,
+          }
+        }
+        href="/images/myimage.jpeg"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when the provider is not used it renders correctly 1`] = `
+<ForwardRef
+  href="/"
+>
+  <LinkInner
+    href="/"
+  >
+    <a
+      data={
+        Object {
+          "isRelative": true,
+          "isStatic": false,
+        }
+      }
+      href="/"
+    >
+      A link
+    </a>
+  </LinkInner>
+</ForwardRef>
+`;

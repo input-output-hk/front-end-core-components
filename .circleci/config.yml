@@ -31,7 +31,7 @@ jobs:
           name: Building src
           command: npm run build
       - persist_to_workspace:
-          root: build
+          root: components
           paths:
             - "*"
   deploy:

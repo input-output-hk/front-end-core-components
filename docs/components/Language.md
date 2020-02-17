@@ -27,7 +27,7 @@ In order to maintain an accurate URL state it is recommended to use a library su
 import React from 'react'
 import { Location } from '@reach/router'
 import { navigate } from 'gatsby'
-import { Language } from '@input-output-hk/front-end-core-components'
+import Language from '@input-output-hk/front-end-core-components/components/Language'
 
 const App = () => (
   <Location>
@@ -101,7 +101,7 @@ const App = () => (
 
 ```javascript
 import React from 'react'
-import { Language } from '@input-output-hk/front-end-core-components'
+import Language from '@input-output-hk/front-end-core-components/components/Language'
 
 const MyComponent = () => (
   <Language.Consumer>

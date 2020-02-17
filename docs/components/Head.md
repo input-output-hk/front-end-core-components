@@ -58,7 +58,7 @@ will result in the output:
 
 ```javascript
 import React from 'react'
-import { Head } from '@input-output-hk/front-end-core-components'
+import Head from '@input-output-hk/front-end-core-components/components/Head'
 
 const MyApp = () => (
   <div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet-async'
+import { isRelative } from './lib/url'
 
 const ALLOW_DUPLICATE_TAGS = [ 'og:locale:alternate' ]
 
@@ -59,7 +60,6 @@ function getHeadData ({ component, page, site, availableLocales, locale, url }) 
     ...(site.meta || [])
   ]
 
-  const isRelative = url => !url.match(/^(\/\/|https?:\/\/|mailto:)/)
   const getFileURL = file => isRelative(file) ? `${url}${file}` : file
   unfilteredMeta.forEach((tag) => {
     if (!tag.content && !tag.file) return

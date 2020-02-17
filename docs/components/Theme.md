@@ -18,7 +18,7 @@ Each of the above features are optional.
 
 ```javascript
 import React from 'react'
-import { Theme } from '@input-output-hk/front-end-core-components'
+import Theme from '@input-output-hk/front-end-core-components/components/Theme'
 
 const App = () => (
   <Location>
@@ -78,7 +78,7 @@ const App = () => (
 
 ```javascript
 import React from 'react'
-import { Theme } from '@input-output-hk/front-end-core-components'
+import Theme from '@input-output-hk/front-end-core-components/components/Theme'
 
 const MyComponent = () => (
   <Theme.Consumer>
