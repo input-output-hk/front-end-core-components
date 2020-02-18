@@ -1,0 +1,616 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> it renders correctly with minimal props 1`] = `
+<Provider>
+  <Image
+    alt="An image"
+    src="/static/image.jpeg"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      src="/static/image.jpeg"
+      uploadcareDomains={Array []}
+    >
+      <img
+        alt="An image"
+        src="/static/image.jpeg"
+      />
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> uploadcare images custom domain images on uploadcare images on uploadcare.example.org use the uploadcare image 1`] = `
+<Provider
+  uploadcareDomains={
+    Array [
+      "uploadcare.example.org",
+    ]
+  }
+>
+  <Image
+    alt="An image"
+    src="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      src="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+      uploadcareDomains={
+        Array [
+          "uploadcare.example.org",
+        ]
+      }
+    >
+      <UploadCareImage
+        alt="An image"
+        breakpoints={
+          Array [
+            4000,
+            3000,
+            2000,
+            1500,
+            1000,
+            800,
+            600,
+            400,
+          ]
+        }
+        src="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+        uploadcareDomains={
+          Array [
+            "uploadcare.example.org",
+          ]
+        }
+      >
+        <picture>
+          <source
+            sizes="(max-width: 4000px) 4000px, (max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
+            srcSet="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/4000/ 4000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+          />
+          <img
+            alt="An image"
+            src="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/"
+          />
+        </picture>
+      </UploadCareImage>
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> uploadcare images it maintains transparency with maintainTransparency 1`] = `
+<Provider>
+  <Image
+    alt="An image"
+    maintainTransparency={true}
+    src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      maintainTransparency={true}
+      src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+      uploadcareDomains={Array []}
+    >
+      <UploadCareImage
+        alt="An image"
+        breakpoints={
+          Array [
+            4000,
+            3000,
+            2000,
+            1500,
+            1000,
+            800,
+            600,
+            400,
+          ]
+        }
+        maintainTransparency={true}
+        src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+        uploadcareDomains={Array []}
+      >
+        <picture>
+          <source
+            sizes="(max-width: 4000px) 4000px, (max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/4000/ 4000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/400/ 400w"
+          />
+          <source
+            sizes="(max-width: 4000px) 4000px, (max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/4000/ 4000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/400/ 400w"
+          />
+          <img
+            alt="An image"
+            src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/"
+          />
+        </picture>
+      </UploadCareImage>
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> uploadcare images it renders the uploadcare picture correctly 1`] = `
+<Provider>
+  <Image
+    alt="An image"
+    src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+      uploadcareDomains={Array []}
+    >
+      <UploadCareImage
+        alt="An image"
+        breakpoints={
+          Array [
+            4000,
+            3000,
+            2000,
+            1500,
+            1000,
+            800,
+            600,
+            400,
+          ]
+        }
+        src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+        uploadcareDomains={Array []}
+      >
+        <picture>
+          <source
+            sizes="(max-width: 4000px) 4000px, (max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/4000/ 4000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+          />
+          <img
+            alt="An image"
+            src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/"
+          />
+        </picture>
+      </UploadCareImage>
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> uploadcare images size factor a higher size factor increases image size 1`] = `
+<Provider>
+  <Image
+    alt="An image"
+    sizeFactor={1.5}
+    src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      sizeFactor={1.5}
+      src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+      uploadcareDomains={Array []}
+    >
+      <UploadCareImage
+        alt="An image"
+        breakpoints={
+          Array [
+            4000,
+            3000,
+            2000,
+            1500,
+            1000,
+            800,
+            600,
+            400,
+          ]
+        }
+        sizeFactor={1.5}
+        src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+        uploadcareDomains={Array []}
+      >
+        <picture>
+          <source
+            sizes="(max-width: 4000px) 6000px, (max-width: 3000px) 4500px, (max-width: 2000px) 3000px, (max-width: 1500px) 2250px, (max-width: 1000px) 1500px, (max-width: 800px) 1200px, (max-width: 600px) 900px, (max-width: 400px) 600px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/6000/ 6000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/4500/ 4500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2250/ 2250w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1200/ 1200w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/900/ 900w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w"
+          />
+          <img
+            alt="An image"
+            src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/"
+          />
+        </picture>
+      </UploadCareImage>
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> uploadcare images size factor a lower size factor decreases image size 1`] = `
+<Provider>
+  <Image
+    alt="An image"
+    sizeFactor={0.5}
+    src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      sizeFactor={0.5}
+      src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+      uploadcareDomains={Array []}
+    >
+      <UploadCareImage
+        alt="An image"
+        breakpoints={
+          Array [
+            4000,
+            3000,
+            2000,
+            1500,
+            1000,
+            800,
+            600,
+            400,
+          ]
+        }
+        sizeFactor={0.5}
+        src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+        uploadcareDomains={Array []}
+      >
+        <picture>
+          <source
+            sizes="(max-width: 4000px) 2000px, (max-width: 3000px) 1500px, (max-width: 2000px) 1000px, (max-width: 1500px) 750px, (max-width: 1000px) 500px, (max-width: 800px) 400px, (max-width: 600px) 300px, (max-width: 400px) 200px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/750/ 750w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/500/ 500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/300/ 300w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/200/ 200w"
+          />
+          <img
+            alt="An image"
+            src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/"
+          />
+        </picture>
+      </UploadCareImage>
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> uploadcare images using custom breakpoints it renders correctly with the breakpoints 1`] = `
+<Provider
+  breakpoints={
+    Array [
+      2000,
+      1800,
+      1200,
+      800,
+      500,
+    ]
+  }
+>
+  <Image
+    alt="An image"
+    src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          2000,
+          1800,
+          1200,
+          800,
+          500,
+        ]
+      }
+      src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+      uploadcareDomains={Array []}
+    >
+      <UploadCareImage
+        alt="An image"
+        breakpoints={
+          Array [
+            2000,
+            1800,
+            1200,
+            800,
+            500,
+          ]
+        }
+        src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+        uploadcareDomains={Array []}
+      >
+        <picture>
+          <source
+            sizes="(max-width: 2000px) 2000px, (max-width: 1800px) 1800px, (max-width: 1200px) 1200px, (max-width: 800px) 800px, (max-width: 500px) 500px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1800/ 1800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1200/ 1200w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/500/ 500w"
+          />
+          <img
+            alt="An image"
+            src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/"
+          />
+        </picture>
+      </UploadCareImage>
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> uploadcare images when a custom component is provided the it renders the upload care image with the custom component 1`] = `
+<Provider>
+  <Image
+    alt="An image"
+    component={[Function]}
+    componentProps={
+      Object {
+        "width": 45,
+      }
+    }
+    src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      component={[Function]}
+      componentProps={
+        Object {
+          "width": 45,
+        }
+      }
+      src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+      uploadcareDomains={Array []}
+    >
+      <UploadCareImage
+        alt="An image"
+        breakpoints={
+          Array [
+            4000,
+            3000,
+            2000,
+            1500,
+            1000,
+            800,
+            600,
+            400,
+          ]
+        }
+        component={[Function]}
+        componentProps={
+          Object {
+            "width": 45,
+          }
+        }
+        src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+        uploadcareDomains={Array []}
+      >
+        <picture>
+          <source
+            sizes="(max-width: 4000px) 4000px, (max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/4000/ 4000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+          />
+          <CustomComponent
+            alt="An image"
+            src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/"
+            width={45}
+          >
+            <img
+              alt="An image"
+              src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/"
+              width={45}
+            />
+          </CustomComponent>
+        </picture>
+      </UploadCareImage>
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> when a custom component is provided the it renders the img with the custom component 1`] = `
+<Provider>
+  <Image
+    alt="An image"
+    component={[Function]}
+    componentProps={
+      Object {
+        "width": 45,
+      }
+    }
+    src="/static/image.jpeg"
+  >
+    <ImageInner
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      component={[Function]}
+      componentProps={
+        Object {
+          "width": 45,
+        }
+      }
+      src="/static/image.jpeg"
+      uploadcareDomains={Array []}
+    >
+      <CustomComponent
+        alt="An image"
+        src="/static/image.jpeg"
+        width={45}
+      >
+        <img
+          alt="An image"
+          src="/static/image.jpeg"
+          width={45}
+        />
+      </CustomComponent>
+    </ImageInner>
+  </Image>
+</Provider>
+`;
+
+exports[`<Image /> when no provider exists it still renders the image 1`] = `
+<Image
+  alt="An image"
+  src="/static/image.jpeg"
+>
+  <ImageInner
+    alt="An image"
+    breakpoints={
+      Array [
+        4000,
+        3000,
+        2000,
+        1500,
+        1000,
+        800,
+        600,
+        400,
+      ]
+    }
+    src="/static/image.jpeg"
+    uploadcareDomains={Array []}
+  >
+    <img
+      alt="An image"
+      src="/static/image.jpeg"
+    />
+  </ImageInner>
+</Image>
+`;
+
+exports[`<Image /> when no provider exists uploadcare images it still renders using the default breakpoints 1`] = `
+<Image
+  alt="An image"
+  src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+>
+  <ImageInner
+    alt="An image"
+    breakpoints={
+      Array [
+        4000,
+        3000,
+        2000,
+        1500,
+        1000,
+        800,
+        600,
+        400,
+      ]
+    }
+    src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+    uploadcareDomains={Array []}
+  >
+    <UploadCareImage
+      alt="An image"
+      breakpoints={
+        Array [
+          4000,
+          3000,
+          2000,
+          1500,
+          1000,
+          800,
+          600,
+          400,
+        ]
+      }
+      src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
+      uploadcareDomains={Array []}
+    >
+      <picture>
+        <source
+          sizes="(max-width: 4000px) 4000px, (max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
+          srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/4000/ 4000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+        />
+        <img
+          alt="An image"
+          src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/"
+        />
+      </picture>
+    </UploadCareImage>
+  </ImageInner>
+</Image>
+`;
