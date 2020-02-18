@@ -61,11 +61,11 @@ will result in the output:
 | component | Component level (one above page) head tag data and highest priority | `Array<Object>` | ✗ | { title: '', meta: [ ] } |
 | component.title | Title at component level | `String` | ✗ | - |
 | component.meta | Meta tags at component level. (See [meta tag structure](#meta-tag-structure) for Object shape) | `Array<Object>` | ✗ | - |
-| locale | Locale to be used for the site | ✗ | - |
-| availableLocales | All available locales for the site | ✗ | - |
-| lang | The language of the site | ✗ | - |
-| url | The URL for the site, used to resolve relative file paths on meta tags | ✗ | - |
-| children | Child components, see [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) for details | ✗ | - |
+| locale | Locale to be used for the site | `String` | ✗ | - |
+| availableLocales | All available locales for the site | `Array<String>` | ✗ | - |
+| lang | The language of the site | `String` | ✗ | - |
+| url | The URL for the site, used to resolve relative file paths on meta tags | `String` | ✗ | - |
+| children | Child components, see [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) for details | `Node` | ✗ | - |
 
 
 ### Meta tag structure
