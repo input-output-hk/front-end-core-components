@@ -15,6 +15,28 @@ Each of the above features are optional.
 * react `^16.3`
 * prop-types `^15.6.2`
 
+## Reference
+
+| prop name | description | type | required? | default value |
+| --------- | ----------- | ---- | --------- | ------------- |
+| location | URL mirroring `window.location`, only pathname, search and hash are required. Prop is required when `useURL` is true. When `useURL` is false, location is not required | `Object` | ✗/✓ | {} |
+| location.pathname | URL path | `String` | ✓ | - |
+| location.search | URL query | `String` | ✓ | - |
+| location.hash | URL hash | `String` | ✓ | - |
+| availableLanguages | List of available languages | `Array<Object>` | ✓ | - |
+| availableLanguages.key | Key of the available language e.g. `en`, `fr` etc., corresponds to URL and local storage values | `String` | ✓ | - |
+| availableLanguages.label | Label for the available language e.g. `English`, `French` etc. | `String` | ✓ | - |
+| availableLanguages.flag | Unicode flag for the available language e.g.  🇺🇸, 🇫🇷 etc. | `String` | ✗ | - |
+| availableLanguages.locale | Locale of the available language e.g. `en-US`, `fr-FR` etc. | `String` | ✓ | - |
+| alternativeLanguages | List of alternative languages which correspond to a language key within `availableLanguages` | `Array<Object>` | ✗ | - |
+| alternativeLanguages.key | Key for the alternative language e.g. `en-GB`, corresponds to URL and local storage values | `String` | ✓ | - |
+| alternativeLanguages.languageKey | Joining key for the alternative language to an available language e.g. `en`, would join on available language `en` | `String` | ✓ | - |
+| onUpdate | Called whenever the language is updated with the following arguments - lang, prevLang, url, prevURL. url and prevURL will be null when `useURL` is false. prevLang and prevURL will be null when the component first mounts. | `Function` | ✗ | - |
+| persistLang | Whether to persist the selected language to local storage or not and also retrieve values from local storage | `Boolean` | ✗ | true |
+| useNavigator | Whether to attempt to read the users locale from `window.navigator.locale` to set a default language (SSR safe) | `Boolean` | ✗ | true |
+| useURL | Whether to utilise the URL to read language state. Will also dictate if updated URL's are passed via `onUpdate`. | `Boolean` | ✗ | true |
+| children | Child nodes | `Node` | ✓ | - |
+
 ## Usage
 
 *The following examples assume the usage of the Gatsby framework.*
