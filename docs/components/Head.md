@@ -48,6 +48,34 @@ will result in the output:
 </head>
 ```
 
+## Reference
+
+| prop name | description | type | required? | default value |
+| --------- | ----------- | ---- | --------- | ------------- |
+| site | Site level (global) head tag data and lowest priority | `Array<Object>` | ✗ | { title: '', meta: [ ] } |
+| site.title | Title at a global level | `String` | ✗ | - |
+| site.meta | Meta tags at a global level. (See [meta tag structure](#meta-tag-structure) for Object shape) | `Array<Object>` | ✗ | - |
+| page | Page level (one above site/global) head tag data and medium priority | `Array<Object>` | ✗ | { title: '', meta: [ ] } |
+| page.title | Title at page level | `String` | ✗ | - |
+| page.meta | Meta tags at page level. (See [meta tag structure](#meta-tag-structure) for Object shape) | `Array<Object>` | ✗ | - |
+| component | Component level (one above page) head tag data and highest priority | `Array<Object>` | ✗ | { title: '', meta: [ ] } |
+| component.title | Title at component level | `String` | ✗ | - |
+| component.meta | Meta tags at component level. (See [meta tag structure](#meta-tag-structure) for Object shape) | `Array<Object>` | ✗ | - |
+| locale | Locale to be used for the site | ✗ | - |
+| availableLocales | All available locales for the site | ✗ | - |
+| lang | The language of the site | ✗ | - |
+| url | The URL for the site, used to resolve relative file paths on meta tags | ✗ | - |
+| children | Child components, see [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) for details | ✗ | - |
+
+
+### Meta tag structure
+
+| prop name | description | type | required? | default value |
+| --------- | ----------- | ---- | --------- | ------------- |
+| name | The name of the tag, `name` attribute | `String` | ✓ | - |
+| content | The content of the tag, `content` attribute. Used instead of `file` prop | `String` | ✗/✓ | - |
+| file | Relative or absolute path to corresponding file, `content` attribute. Used instead of `content` prop | `String` | ✗/✓ | - |
+
 ## Dependencies
 
 * react `^16.3`
