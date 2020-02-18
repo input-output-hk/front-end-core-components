@@ -12,6 +12,16 @@ Each of the above features are optional.
 * react `^16.3`
 * prop-types `^15.6.2`
 
+## Reference
+
+| prop name | description | type | required? | default value |
+| --------- | ----------- | ---- | --------- | ------------- |
+| themes | Array of themes to choose from | `Array<Object>` | ✓ | - |
+| themes.key | Reference for a theme | `String` | ✓ | - |
+| themes.config | The themes configuration, any structure for your use case can be accepted | `Object` | ✓ | - |
+| onUpdate | Called whenever the theme is updated with the following arguments - theme, prevTheme. prevTheme will be null when the component mounts. | ✗ | - |
+| persistTheme | Whether to persist the selected theme to local storage or not and also retrieve values from local storage | `Boolean` | ✗ | true |
+
 ## Usage
 
 ### Provider
