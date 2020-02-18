@@ -7,6 +7,23 @@ The Link component is intended to be used alongside the [Language](Language.md) 
 * react `^16.3`
 * prop-types `^15.6.2`
 
+## Reference
+
+### Provider
+
+| prop name | description | type | required? | default value |
+| --------- | ----------- | ---- | --------- | ------------- |
+| lang | Current language in the URL | `String` | ✗ | - |
+| isStatic | Callback to check if a URL is static, accepts single argument of href (String) and should return a Boolean | `Function` | ✗ | (href) => false |
+| children | Child nodes | `Node` | ✓ | - |
+
+### Link
+
+| prop name | description | type | required? | default value |
+| --------- | ----------- | ---- | --------- | ------------- |
+| href | The URL for the link with or without a language prefix | `String` | ✓ | - |
+| children | Child nodes | `Node` | ✓ | - |
+
 ## Usage
 
 ### Provider (optional)
