@@ -13,20 +13,21 @@ The component can be used for images not hosted with [Uploadcare](https://upload
 
 | prop name | description | type | required? | default value |
 | --------- | ----------- | ---- | --------- | ------------- |
-| `uploadcareDomains` | List of custom Uploadcare domains | `Array<String>` | ✗ | `[ ]` |
-| `breakpoints` | List of breakpoints used for responsive images | `Array<Integer>` | ✗ | `[ 4000, 3000, 2000, 1500, 1000, 800, 600, 400 ]` |
+| uploadcareDomains | List of custom Uploadcare domains | `Array<String>` | ✗ | [ ] |
+| breakpoints | List of breakpoints used for responsive images | `Array<Integer>` | ✗ | [ 4000, 3000, 2000, 1500, 1000, 800, 600, 400 ] |
+| children | Child nodes | `Node` | ✓ | - |
 
 
 ### Image
 
 | prop name | description | type | required? | default value |
 | --------- | ----------- | ---- | --------- | ------------- |
-| `src` | Image src | `String` | ✓ | - |
-| `alt` | Image alt | `String` | ✓ | - |
-| `component` | Component to use for rendering image instead of `<img />` | `Function|String` | ✗ | `img` |
-| `componentProps` | Props to pass to component used as `<img />` | `Object` | ✗ | `{}` |
-| `maintainTransparency` | Whether to retain transparency in Uploadcare images or not | `Boolean` | ✗ | `false` |
-| `sizeFactor` | Used to scale the image responsively in relation to the breakpoints. Smaller numbers == smaller image size and vice versa | `Number` | ✗ | `1` |
+| src | Image src | `String` | ✓ | - |
+| alt | Image alt | `String` | ✓ | - |
+| component | Component to use for rendering image instead of `<img />` | `Function\|String` | ✗ | img |
+| componentProps | Props to pass to component used as `<img />` | `Object` | ✗ | {} |
+| maintainTransparency | Whether to retain transparency in Uploadcare images or not | `Boolean` | ✗ | false |
+| sizeFactor | Used to scale the image responsively in relation to the breakpoints. Smaller numbers == smaller image size and vice versa | `Number` | ✗ | 1 |
 
 ## Dependencies
 
