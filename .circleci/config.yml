@@ -41,6 +41,8 @@ jobs:
       - restore_cache:
           keys:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - attach_workspace:
+          at: components
       - run:
           name: Publish to NPM
           command: ./scripts/publish.sh
