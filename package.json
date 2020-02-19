@@ -8,7 +8,7 @@
     "clean": "rm -rf ./components",
     "lint": "eslint src/**/*.js",
     "install-peers": "npm-install-peers",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run lint && npm run test",
     "test": "TZ=UTC jest src/",
     "watch": "npm run build -- --watch"
