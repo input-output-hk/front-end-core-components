@@ -48,6 +48,12 @@ will result in the output:
 </head>
 ```
 
+## Dependencies
+
+* react `^16.3`
+* prop-types `^15.6.2`
+* react-helmet-async `^1.0.4`
+
 ## Reference
 
 | prop name | description | type | required? | default value |
@@ -75,12 +81,6 @@ will result in the output:
 | name | The name of the tag, `name` attribute | `String` | ✓ | - |
 | content | The content of the tag, `content` attribute. Used instead of `file` prop | `String` | ✗/✓ | - |
 | file | Relative or absolute path to corresponding file, `content` attribute. Used instead of `content` prop | `String` | ✗/✓ | - |
-
-## Dependencies
-
-* react `^16.3`
-* prop-types `^15.6.2`
-* react-helmet-async `^1.0.4`
 
 ## Usage
 

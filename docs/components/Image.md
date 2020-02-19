@@ -7,6 +7,11 @@ The Image component is designed to be used with [Uploadcare](https://uploadcare.
 
 The component can be used for images not hosted with [Uploadcare](https://uploadcare.com/) and will simply act as a regular `img` tag unless a custom component is provided on the `Component` prop.
 
+## Dependencies
+
+* react `^16.3`
+* prop-types `^15.6.2`
+
 ## Reference
 
 ### Provider
@@ -28,11 +33,6 @@ The component can be used for images not hosted with [Uploadcare](https://upload
 | componentProps | Props to pass to component used as `<img />` | `Object` | ✗ | {} |
 | maintainTransparency | Whether to retain transparency in Uploadcare images or not | `Boolean` | ✗ | false |
 | sizeFactor | Used to scale the image responsively in relation to the breakpoints. Smaller numbers == smaller image size and vice versa | `Number` | ✗ | 1 |
-
-## Dependencies
-
-* react `^16.3`
-* prop-types `^15.6.2`
 
 ## Usage
 
