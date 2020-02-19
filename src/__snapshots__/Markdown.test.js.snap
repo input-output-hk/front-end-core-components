@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Markdown /> it renders correctly with minimal props 1`] = `
+<Provider>
+  <Markdown
+    source="# A title"
+  >
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      parserOptions={Object {}}
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="# A title"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1-0"
+      >
+        <Heading
+          key="heading-1-1-0"
+          level={1}
+        >
+          <h1>
+            <TextRenderer
+              key="text-1-3-0"
+              nodeKey="text-1-3-0"
+              value="A title"
+            >
+              A title
+            </TextRenderer>
+          </h1>
+        </Heading>
+      </Root>
+    </ReactMarkdown>
+  </Markdown>
+</Provider>
+`;
+
+exports[`<Markdown /> setting props at a global level it renders using the global props 1`] = `
+<Provider
+  markdownProps={
+    Object {
+      "source": "# A global title",
+    }
+  }
+>
+  <Markdown>
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      parserOptions={Object {}}
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="# A global title"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1-0"
+      >
+        <Heading
+          key="heading-1-1-0"
+          level={1}
+        >
+          <h1>
+            <TextRenderer
+              key="text-1-3-0"
+              nodeKey="text-1-3-0"
+              value="A global title"
+            >
+              A global title
+            </TextRenderer>
+          </h1>
+        </Heading>
+      </Root>
+    </ReactMarkdown>
+  </Markdown>
+</Provider>
+`;
+
+exports[`<Markdown /> setting props at a global level overwriting the global props it renders with the local props overwriting the global props 1`] = `
+<Provider
+  markdownProps={
+    Object {
+      "source": "# A global title",
+    }
+  }
+>
+  <Markdown
+    source="# A local title"
+  >
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      parserOptions={Object {}}
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="# A local title"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1-0"
+      >
+        <Heading
+          key="heading-1-1-0"
+          level={1}
+        >
+          <h1>
+            <TextRenderer
+              key="text-1-3-0"
+              nodeKey="text-1-3-0"
+              value="A local title"
+            >
+              A local title
+            </TextRenderer>
+          </h1>
+        </Heading>
+      </Root>
+    </ReactMarkdown>
+  </Markdown>
+</Provider>
+`;
+
+exports[`<Markdown /> setting props at a global level setting parserOptions at a global level it renders with the renderers at a global level 1`] = `
+<Provider
+  markdownProps={
+    Object {
+      "parserOptions": Object {
+        "pedantic": true,
+      },
+    }
+  }
+>
+  <Markdown
+    source="Some markdown"
+  >
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      parserOptions={
+        Object {
+          "pedantic": true,
+        }
+      }
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="Some markdown"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1-0"
+      >
+        <p
+          key="paragraph-1-1-0"
+        >
+          <TextRenderer
+            key="text-1-1-0"
+            nodeKey="text-1-1-0"
+            value="Some markdown"
+          >
+            Some markdown
+          </TextRenderer>
+        </p>
+      </Root>
+    </ReactMarkdown>
+  </Markdown>
+</Provider>
+`;
+
+exports[`<Markdown /> setting props at a global level setting parserOptions at a global level overwriting the global renderers it renders with the local renderers overwriting the global renderers 1`] = `
+<Provider
+  markdownProps={
+    Object {
+      "parserOptions": Object {
+        "pedantic": true,
+      },
+    }
+  }
+>
+  <Markdown
+    parserOptions={
+      Object {
+        "pedantic": false,
+      }
+    }
+    source="Some more markdown"
+  >
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      parserOptions={
+        Object {
+          "pedantic": false,
+        }
+      }
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="Some more markdown"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1-0"
+      >
+        <p
+          key="paragraph-1-1-0"
+        >
+          <TextRenderer
+            key="text-1-1-0"
+            nodeKey="text-1-1-0"
+            value="Some more markdown"
+          >
+            Some more markdown
+          </TextRenderer>
+        </p>
+      </Root>
+    </ReactMarkdown>
+  </Markdown>
+</Provider>
+`;
+
+exports[`<Markdown /> setting props at a global level setting renderers at a global level it renders with the renderers at a global level 1`] = `
+<Provider
+  markdownProps={
+    Object {
+      "renderers": Object {
+        "heading": [Function],
+      },
+    }
+  }
+>
+  <Markdown
+    source="# A custom title"
+  >
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      parserOptions={Object {}}
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={
+        Object {
+          "heading": [Function],
+        }
+      }
+      skipHtml={false}
+      source="# A custom title"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1-0"
+      >
+        <GlobalTitle
+          key="heading-1-1-0"
+          level={1}
+        >
+          <h1
+            className="my-global-title"
+            level={1}
+          >
+            <TextRenderer
+              key="text-1-3-0"
+              nodeKey="text-1-3-0"
+              value="A custom title"
+            >
+              A custom title
+            </TextRenderer>
+          </h1>
+        </GlobalTitle>
+      </Root>
+    </ReactMarkdown>
+  </Markdown>
+</Provider>
+`;
+
+exports[`<Markdown /> setting props at a global level setting renderers at a global level overwriting the global renderers it renders with the local renderers overwriting the global renderers 1`] = `
+<Provider
+  markdownProps={
+    Object {
+      "renderers": Object {
+        "heading": [Function],
+      },
+    }
+  }
+>
+  <Markdown
+    renderers={
+      Object {
+        "heading": [Function],
+      }
+    }
+    source="# Another custom title"
+  >
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      parserOptions={Object {}}
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={
+        Object {
+          "heading": [Function],
+        }
+      }
+      skipHtml={false}
+      source="# Another custom title"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1-0"
+      >
+        <LocalTitle
+          key="heading-1-1-0"
+          level={1}
+        >
+          <h1
+            className="my-local-title"
+            level={1}
+          >
+            <TextRenderer
+              key="text-1-3-0"
+              nodeKey="text-1-3-0"
+              value="Another custom title"
+            >
+              Another custom title
+            </TextRenderer>
+          </h1>
+        </LocalTitle>
+      </Root>
+    </ReactMarkdown>
+  </Markdown>
+</Provider>
+`;
+
+exports[`<Markdown /> when no Provider is present it still renders the markdown correctly 1`] = `
+<Markdown
+  source="no global state"
+>
+  <ReactMarkdown
+    astPlugins={Array []}
+    escapeHtml={true}
+    parserOptions={Object {}}
+    plugins={Array []}
+    rawSourcePos={false}
+    renderers={Object {}}
+    skipHtml={false}
+    source="no global state"
+    sourcePos={false}
+    transformLinkUri={[Function]}
+  >
+    <Root
+      key="root-1-1-0"
+    >
+      <p
+        key="paragraph-1-1-0"
+      >
+        <TextRenderer
+          key="text-1-1-0"
+          nodeKey="text-1-1-0"
+          value="no global state"
+        >
+          no global state
+        </TextRenderer>
+      </p>
+    </Root>
+  </ReactMarkdown>
+</Markdown>
+`;
