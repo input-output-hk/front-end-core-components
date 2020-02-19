@@ -57,11 +57,13 @@
     "npm-install-peers": "^1.2.1",
     "react-dom": "^16.12.0"
   },
-  "peerDependencies": {
-    "react": "^16.3.0",
+  "dependencies": {
     "prop-types": "^15.6.2",
     "react-helmet-async": "^1.0.4",
     "react-markdown": "^4.2.2"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0"
   },
   "homepage": "https://github.com/input-output-hk/front-end-core-components#readme"
 }
