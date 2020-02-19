@@ -1,6 +1,6 @@
 {
   "name": "@input-output-hk/front-end-core-components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "IOHK front-end web core React components",
   "main": "components/index.js",
   "scripts": {
@@ -30,8 +30,7 @@
   ],
   "files": [
     "/src",
-    "/components",
-    "README.md"
+    "/components"
   ],
   "devDependencies": {
     "@babel/cli": "^7.4.4",
