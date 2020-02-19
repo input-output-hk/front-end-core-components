@@ -30,8 +30,7 @@
   ],
   "files": [
     "/src",
-    "/components",
-    "README.md"
+    "/components"
   ],
   "devDependencies": {
     "@babel/cli": "^7.4.4",
