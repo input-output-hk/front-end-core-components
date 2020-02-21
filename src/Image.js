@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const ImageContext = createContext()
 
-const DEFAULT_BREAKPOINTS = [ 4000, 3000, 2000, 1500, 1000, 800, 600, 400 ]
+const DEFAULT_BREAKPOINTS = [ 3000, 2000, 1500, 1000, 800, 600, 400 ]
 
 export const Provider = ({ children, uploadcareDomains = [], breakpoints = DEFAULT_BREAKPOINTS }) => {
   const getSortedBreakpoints = () => {
@@ -31,7 +31,7 @@ const UploadCareImage = ({ src, sizeFactor = 1, alt, maintainTransparency, compo
     const imageSrc = `${src}-/format/${type.replace(/^image\//, '')}/`
     return (
       <source
-        srcSet={breakpoints.map(breakpoint => `${imageSrc}-/resize/${breakpoint * sizeFactor}/ ${breakpoint * sizeFactor}w`).join(', ')}
+        srcSet={breakpoints.map(breakpoint => `${imageSrc}-/resize/${Math.min(3000, breakpoint * sizeFactor)}/ ${breakpoint * sizeFactor}w`).join(', ')}
         sizes={breakpoints.map(breakpoint => `(max-width: ${breakpoint}px) ${breakpoint * sizeFactor}px`).concat('100vw').join(', ')}
       />
     )
