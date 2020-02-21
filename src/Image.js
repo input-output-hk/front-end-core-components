@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const ImageContext = createContext()
 
-const DEFAULT_BREAKPOINTS = [ 4000, 3000, 2000, 1500, 1000, 800, 600, 400 ]
+const DEFAULT_BREAKPOINTS = [ 3000, 2000, 1500, 1000, 800, 600, 400 ]
 
 export const Provider = ({ children, uploadcareDomains = [], breakpoints = DEFAULT_BREAKPOINTS }) => {
   const getSortedBreakpoints = () => {
