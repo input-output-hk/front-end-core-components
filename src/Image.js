@@ -3,21 +3,19 @@ import PropTypes from 'prop-types'
 
 const ImageContext = createContext()
 
-const DEFAULT_BREAKPOINTS = [ 3000, 2000, 1500, 1000, 800, 600, 400 ]
+const DEFAULT_BREAKPOINTS = [ 400, 600, 800, 1000, 1500, 2000, 3000 ]
 
-export const Provider = ({ children, uploadcareDomains = [], breakpoints = DEFAULT_BREAKPOINTS }) => {
-  const getSortedBreakpoints = () => {
-    const sortedBreakpoints = [ ...breakpoints ]
-    sortedBreakpoints.sort((a, b) => a > b ? -1 : a < b ? 1 : 0)
-    return sortedBreakpoints
-  }
-
-  return (
-    <ImageContext.Provider value={{ uploadcareDomains, breakpoints: getSortedBreakpoints() }}>
-      {children}
-    </ImageContext.Provider>
-  )
+const getSortedBreakpoints = (breakpoints) => {
+  const sortedBreakpoints = [ ...breakpoints ]
+  sortedBreakpoints.sort((a, b) => a < b ? -1 : a > b ? 1 : 0)
+  return sortedBreakpoints
 }
+
+export const Provider = ({ children, uploadcareDomains = [], breakpoints = DEFAULT_BREAKPOINTS }) => (
+  <ImageContext.Provider value={{ uploadcareDomains, breakpoints: getSortedBreakpoints(breakpoints) }}>
+    {children}
+  </ImageContext.Provider>
+)
 
 Provider.propTypes = {
   children: PropTypes.node.isRequired,
@@ -103,7 +101,7 @@ ImageInner.propTypes = {
 
 const Image = (props) => (
   <ImageContext.Consumer>
-    {({ uploadcareDomains = [], breakpoints = DEFAULT_BREAKPOINTS } = {}) => (
+    {({ uploadcareDomains = [], breakpoints = getSortedBreakpoints(DEFAULT_BREAKPOINTS) } = {}) => (
       <ImageInner {...props} uploadcareDomains={uploadcareDomains} breakpoints={breakpoints} />
     )}
   </ImageContext.Consumer>
