@@ -19,7 +19,7 @@ The component can be used for images not hosted with [Uploadcare](https://upload
 | prop name | description | type | required? | default value |
 | --------- | ----------- | ---- | --------- | ------------- |
 | uploadcareDomains | List of custom Uploadcare domains | `Array<String>` | ✗ | [ ] |
-| breakpoints | List of breakpoints used for responsive images | `Array<Integer>` | ✗ | [ 3000, 2000, 1500, 1000, 800, 600, 400 ] |
+| breakpoints | List of breakpoints used for responsive images | `Array<Integer>` | ✗ | [ 400, 600, 800, 1000, 1500, 2000, 3000 ] |
 | children | Child nodes | `Node` | ✓ | - |
 
 
@@ -83,8 +83,8 @@ export default () => (
 ```html
 <picture>
   <source
-    sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-    srcSet="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+    sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+    srcSet="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w"
   />
   <img src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/" alt="Shelley" />
 </picture>
@@ -109,12 +109,12 @@ export default () => (
 ```html
 <picture>
   <source
-    sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-    srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/400/ 400w"
+    sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+    srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/3000/ 3000w"
   />
   <source
-    sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-    srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/400/ 400w"
+    sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+    srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/3000/ 3000w"
   />
   <img src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/" alt="Shelley" />
 </picture>

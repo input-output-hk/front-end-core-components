@@ -10,13 +10,13 @@ exports[`<Image /> it renders correctly with minimal props 1`] = `
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       src="/static/image.jpeg"
@@ -47,13 +47,13 @@ exports[`<Image /> uploadcare images custom domain images on uploadcare images o
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       src="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/"
@@ -67,13 +67,13 @@ exports[`<Image /> uploadcare images custom domain images on uploadcare images o
         alt="An image"
         breakpoints={
           Array [
-            3000,
-            2000,
-            1500,
-            1000,
-            800,
-            600,
             400,
+            600,
+            800,
+            1000,
+            1500,
+            2000,
+            3000,
           ]
         }
         src="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/"
@@ -85,8 +85,8 @@ exports[`<Image /> uploadcare images custom domain images on uploadcare images o
       >
         <picture>
           <source
-            sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-            srcSet="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+            sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+            srcSet="http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, http://uploadcare.example.org/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w"
           />
           <img
             alt="An image"
@@ -110,13 +110,13 @@ exports[`<Image /> uploadcare images it maintains transparency with maintainTran
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       maintainTransparency={true}
@@ -127,13 +127,13 @@ exports[`<Image /> uploadcare images it maintains transparency with maintainTran
         alt="An image"
         breakpoints={
           Array [
-            3000,
-            2000,
-            1500,
-            1000,
-            800,
-            600,
             400,
+            600,
+            800,
+            1000,
+            1500,
+            2000,
+            3000,
           ]
         }
         maintainTransparency={true}
@@ -142,12 +142,12 @@ exports[`<Image /> uploadcare images it maintains transparency with maintainTran
       >
         <picture>
           <source
-            sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/400/ 400w"
+            sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/webp/-/resize/3000/ 3000w"
           />
           <source
-            sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/400/ 400w"
+            sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/png/-/resize/3000/ 3000w"
           />
           <img
             alt="An image"
@@ -170,13 +170,13 @@ exports[`<Image /> uploadcare images it renders the uploadcare picture correctly
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
@@ -186,13 +186,13 @@ exports[`<Image /> uploadcare images it renders the uploadcare picture correctly
         alt="An image"
         breakpoints={
           Array [
-            3000,
-            2000,
-            1500,
-            1000,
-            800,
-            600,
             400,
+            600,
+            800,
+            1000,
+            1500,
+            2000,
+            3000,
           ]
         }
         src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
@@ -200,8 +200,8 @@ exports[`<Image /> uploadcare images it renders the uploadcare picture correctly
       >
         <picture>
           <source
-            sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+            sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w"
           />
           <img
             alt="An image"
@@ -225,13 +225,13 @@ exports[`<Image /> uploadcare images size factor a higher size factor increases 
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       sizeFactor={1.5}
@@ -242,13 +242,13 @@ exports[`<Image /> uploadcare images size factor a higher size factor increases 
         alt="An image"
         breakpoints={
           Array [
-            3000,
-            2000,
-            1500,
-            1000,
-            800,
-            600,
             400,
+            600,
+            800,
+            1000,
+            1500,
+            2000,
+            3000,
           ]
         }
         sizeFactor={1.5}
@@ -257,8 +257,8 @@ exports[`<Image /> uploadcare images size factor a higher size factor increases 
       >
         <picture>
           <source
-            sizes="(max-width: 3000px) 4500px, (max-width: 2000px) 3000px, (max-width: 1500px) 2250px, (max-width: 1000px) 1500px, (max-width: 800px) 1200px, (max-width: 600px) 900px, (max-width: 400px) 600px, 100vw"
-            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 4500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2250/ 2250w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1200/ 1200w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/900/ 900w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w"
+            sizes="(max-width: 400px) 600px, (max-width: 600px) 900px, (max-width: 800px) 1200px, (max-width: 1000px) 1500px, (max-width: 1500px) 2250px, (max-width: 2000px) 3000px, (max-width: 3000px) 4500px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/900/ 900w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1200/ 1200w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2250/ 2250w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 4500w"
           />
           <img
             alt="An image"
@@ -282,13 +282,13 @@ exports[`<Image /> uploadcare images size factor a lower size factor decreases i
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       sizeFactor={0.5}
@@ -299,13 +299,13 @@ exports[`<Image /> uploadcare images size factor a lower size factor decreases i
         alt="An image"
         breakpoints={
           Array [
-            3000,
-            2000,
-            1500,
-            1000,
-            800,
-            600,
             400,
+            600,
+            800,
+            1000,
+            1500,
+            2000,
+            3000,
           ]
         }
         sizeFactor={0.5}
@@ -314,8 +314,8 @@ exports[`<Image /> uploadcare images size factor a lower size factor decreases i
       >
         <picture>
           <source
-            sizes="(max-width: 3000px) 1500px, (max-width: 2000px) 1000px, (max-width: 1500px) 750px, (max-width: 1000px) 500px, (max-width: 800px) 400px, (max-width: 600px) 300px, (max-width: 400px) 200px, 100vw"
-            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/750/ 750w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/500/ 500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/300/ 300w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/200/ 200w"
+            sizes="(max-width: 400px) 200px, (max-width: 600px) 300px, (max-width: 800px) 400px, (max-width: 1000px) 500px, (max-width: 1500px) 750px, (max-width: 2000px) 1000px, (max-width: 3000px) 1500px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/200/ 200w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/300/ 300w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/500/ 500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/750/ 750w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w"
           />
           <img
             alt="An image"
@@ -348,11 +348,11 @@ exports[`<Image /> uploadcare images using custom breakpoints it renders correct
       alt="An image"
       breakpoints={
         Array [
-          2000,
-          1800,
-          1200,
-          800,
           500,
+          800,
+          1200,
+          1800,
+          2000,
         ]
       }
       src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
@@ -362,11 +362,11 @@ exports[`<Image /> uploadcare images using custom breakpoints it renders correct
         alt="An image"
         breakpoints={
           Array [
-            2000,
-            1800,
-            1200,
-            800,
             500,
+            800,
+            1200,
+            1800,
+            2000,
           ]
         }
         src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
@@ -374,8 +374,8 @@ exports[`<Image /> uploadcare images using custom breakpoints it renders correct
       >
         <picture>
           <source
-            sizes="(max-width: 2000px) 2000px, (max-width: 1800px) 1800px, (max-width: 1200px) 1200px, (max-width: 800px) 800px, (max-width: 500px) 500px, 100vw"
-            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1800/ 1800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1200/ 1200w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/500/ 500w"
+            sizes="(max-width: 500px) 500px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1800px) 1800px, (max-width: 2000px) 2000px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/500/ 500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1200/ 1200w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1800/ 1800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w"
           />
           <img
             alt="An image"
@@ -404,13 +404,13 @@ exports[`<Image /> uploadcare images when a custom component is provided the it 
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       component={[Function]}
@@ -426,13 +426,13 @@ exports[`<Image /> uploadcare images when a custom component is provided the it 
         alt="An image"
         breakpoints={
           Array [
-            3000,
-            2000,
-            1500,
-            1000,
-            800,
-            600,
             400,
+            600,
+            800,
+            1000,
+            1500,
+            2000,
+            3000,
           ]
         }
         component={[Function]}
@@ -446,8 +446,8 @@ exports[`<Image /> uploadcare images when a custom component is provided the it 
       >
         <picture>
           <source
-            sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+            sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+            srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w"
           />
           <CustomComponent
             alt="An image"
@@ -483,13 +483,13 @@ exports[`<Image /> when a custom component is provided the it renders the img wi
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       component={[Function]}
@@ -526,13 +526,13 @@ exports[`<Image /> when no provider exists it still renders the image 1`] = `
     alt="An image"
     breakpoints={
       Array [
-        3000,
-        2000,
-        1500,
-        1000,
-        800,
-        600,
         400,
+        600,
+        800,
+        1000,
+        1500,
+        2000,
+        3000,
       ]
     }
     src="/static/image.jpeg"
@@ -555,13 +555,13 @@ exports[`<Image /> when no provider exists uploadcare images it still renders us
     alt="An image"
     breakpoints={
       Array [
-        3000,
-        2000,
-        1500,
-        1000,
-        800,
-        600,
         400,
+        600,
+        800,
+        1000,
+        1500,
+        2000,
+        3000,
       ]
     }
     src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
@@ -571,13 +571,13 @@ exports[`<Image /> when no provider exists uploadcare images it still renders us
       alt="An image"
       breakpoints={
         Array [
-          3000,
-          2000,
-          1500,
-          1000,
-          800,
-          600,
           400,
+          600,
+          800,
+          1000,
+          1500,
+          2000,
+          3000,
         ]
       }
       src="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/"
@@ -585,8 +585,8 @@ exports[`<Image /> when no provider exists uploadcare images it still renders us
     >
       <picture>
         <source
-          sizes="(max-width: 3000px) 3000px, (max-width: 2000px) 2000px, (max-width: 1500px) 1500px, (max-width: 1000px) 1000px, (max-width: 800px) 800px, (max-width: 600px) 600px, (max-width: 400px) 400px, 100vw"
-          srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w"
+          sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1500px) 1500px, (max-width: 2000px) 2000px, (max-width: 3000px) 3000px, 100vw"
+          srcSet="https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/400/ 400w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/600/ 600w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/800/ 800w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1000/ 1000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/1500/ 1500w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/2000/ 2000w, https://ucarecdn.com/c19187bc-6028-45fa-bf23-18dd31cd7636/-/format/jpeg/-/resize/3000/ 3000w"
         />
         <img
           alt="An image"
