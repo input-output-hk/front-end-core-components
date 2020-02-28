@@ -1,11 +1,15 @@
 import Head from './Head'
-import * as Language from './Language'
+import Image from './Image'
+import Language from './Language'
 import Link from './Link'
-import * as Theme from './Theme'
+import Markdown from './Markdown'
+import Theme from './Theme'
 
 export {
   Head,
+  Image,
   Language,
   Link,
+  Markdown,
   Theme
 }

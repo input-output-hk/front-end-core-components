@@ -211,3 +211,8 @@ export {
   Provider,
   Consumer
 }
+
+export default {
+  Provider,
+  Consumer
+}
