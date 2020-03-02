@@ -23,7 +23,7 @@ const Provider = ({
    * @returns {Void}
    */
   function persistToLocalStorage (language) {
-    if (persistLang) window && window.localStorage && window.localStorage.setItem('lang', language)
+    if (persistLang) global.window && global.window.localStorage && global.window.localStorage.setItem('lang', language)
   }
 
   /**
@@ -40,9 +40,9 @@ const Provider = ({
     // Use URL language where available
     if (isValidLanguage(urlLang)) return urlLang
     // Fallback to local storage or default config
-    const localStorageLang = (persistLang && (window && window.localStorage && window.localStorage.getItem('lang'))) || ''
+    const localStorageLang = (persistLang && (global.window && global.window.localStorage && global.window.localStorage.getItem('lang'))) || ''
     // Users browser language
-    const navigatorLanguage = ((useNavigator && (window && window.navigator && window.navigator.language)) || '').substring(0, 2)
+    const navigatorLanguage = ((useNavigator && (global.window && global.window.navigator && global.window.navigator.language)) || '').substring(0, 2)
     // Use local storage first as they have already visited the site
     if (isValidLanguage(localStorageLang)) return localStorageLang
     // Use the users browser language if it supported by the site
