@@ -44,15 +44,15 @@ Object {
 
 exports[`Theme context <Consumer /> when setTheme is called the consumer values are correctly updated 1`] = `
 Object {
-  "key": "iohk-dark",
+  "key": "iohk-light",
   "setTheme": [Function],
   "theme": Object {
     "colors": Object {
-      "primary": "tomato",
-      "secondary": "papayawhip",
+      "primary": "thistle",
+      "secondary": "dodgerblue",
     },
     "typography": Object {
-      "fontFamily": "Arial",
+      "fontFamily": "Helvetica",
     },
   },
   "themes": Array [
