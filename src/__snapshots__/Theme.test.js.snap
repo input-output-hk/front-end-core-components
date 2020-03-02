@@ -201,6 +201,18 @@ exports[`Theme context <Provider /> it renders the provider component correctly 
   value={
     Object {
       "key": "iohk-dark",
+      "originalTheme": Object {
+        "config": Object {
+          "colors": Object {
+            "primary": "tomato",
+            "secondary": "papayawhip",
+          },
+          "typography": Object {
+            "fontFamily": "Arial",
+          },
+        },
+        "key": "iohk-dark",
+      },
       "setTheme": [Function],
       "theme": Object {
         "colors": Object {

@@ -27,7 +27,7 @@ const Provider = ({
    */
   function getInitialTheme () {
     let theme
-    if (persistTheme && window && window.localStorage && window.localStorage.getItem) theme = window.localStorage.getItem('theme') || ''
+    if (persistTheme && global.window && global.window.localStorage && global.window.localStorage.getItem) theme = global.window.localStorage.getItem('theme') || ''
     return isValidTheme(theme)
       ? theme
       : themes[0].key
@@ -40,7 +40,7 @@ const Provider = ({
    * @returns {Void}
    */
   function persistToLocalStorage (theme) {
-    if (persistTheme && window && window.localStorage && window.localStorage.setItem) window.localStorage.setItem('theme', theme)
+    if (persistTheme && global.window && global.window.localStorage && global.window.localStorage.setItem) global.window.localStorage.setItem('theme', theme)
   }
 
   /**
@@ -64,16 +64,25 @@ const Provider = ({
     if (!isValidTheme(newTheme)) throw new Error(`Theme ${newTheme} does not exist`)
     persistToLocalStorage(newTheme)
     onUpdate({ theme: newTheme, prevTheme: theme })
-    updateTheme(theme)
+    updateTheme(newTheme)
   }
 
   /**
-   * Gets the theme configuration for the theme key
+   * Gets the theme configuration for the theme key (untransformed)
+   *
+   * @returns {Object}
+   */
+  function getOriginalTheme () {
+    return themes.filter(({ key }) => key === theme).shift() || {}
+  }
+
+  /**
+   * Gets the theme configuration for the theme key (transformed)
    *
    * @returns {Object}
    */
   function getTheme () {
-    return transformTheme(themes.filter(({ key }) => key === theme).shift() || {})
+    return transformTheme(getOriginalTheme())
   }
 
   return (
@@ -81,6 +90,7 @@ const Provider = ({
       value={{
         key: theme,
         theme: getTheme(),
+        originalTheme: getOriginalTheme(),
         setTheme,
         themes
       }}
