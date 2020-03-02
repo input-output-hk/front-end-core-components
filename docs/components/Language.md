@@ -128,7 +128,7 @@ import Language from '@input-output-hk/front-end-core-components/components/Lang
 const MyComponent = () => (
   <Language.Consumer>
     {({
-      lang,
+      key,
       setLang,
       locale,
       flag,
