@@ -13,11 +13,7 @@ function getWrapper ({ props = {}, providerProps = {} } = {}) {
         {...DEFAULT_PROPS}
         {...props}
       >
-        {({ href, isStatic, isRelative }) => (
-          <a data={{ isStatic, isRelative }} href={href}>
-            A link
-          </a>
-        )}
+        A link
       </Link>
     </Provider>
   )
@@ -65,15 +61,36 @@ describe('<Link />', () => {
     })
   })
 
+  describe('when a custom component is used', () => {
+    let CustomLink
+    beforeEach(() => {
+      CustomLink = (props) => {
+        const componentProps = { ...props }
+        Object.keys(props).forEach(key => {
+          if (key.toLowerCase() !== key) {
+            componentProps[key.toLowerCase()] = componentProps[key]
+            delete componentProps[key]
+          }
+
+          componentProps[key.toLowerCase()] = componentProps[key.toLowerCase()].toString()
+        })
+
+        return (
+          <div {...componentProps} />
+        )
+      }
+    })
+
+    test('it renders correctly', () => {
+      expect(getWrapper({ providerProps: { component: CustomLink }, props: { href: '/page/' } })).toMatchSnapshot()
+    })
+  })
+
   describe('when the provider is not used', () => {
     test('it renders correctly', () => {
       expect(mount(
         <Link href='/'>
-          {({ href, isStatic, isRelative }) => (
-            <a data={{ isStatic, isRelative }} href={href}>
-              A link
-            </a>
-          )}
+          A link
         </Link>
       )).toMatchSnapshot()
     })
