@@ -6,21 +6,50 @@ exports[`<Link /> it renders correctly with minimal props 1`] = `
     href="/"
   >
     <LinkInner
+      component="a"
       href="/"
       isStatic={[Function]}
       lang=""
     >
       <a
-        data={
-          Object {
-            "isRelative": true,
-            "isStatic": false,
-          }
-        }
         href="/"
+        lang=""
       >
         A link
       </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when a custom component is used it renders correctly 1`] = `
+<Provider
+  component={[Function]}
+>
+  <ForwardRef
+    href="/page/"
+  >
+    <LinkInner
+      component={[Function]}
+      href="/page/"
+      isStatic={[Function]}
+      lang=""
+    >
+      <CustomLink
+        href="/page/"
+        isRelative={true}
+        isStatic={false}
+        lang=""
+      >
+        <div
+          href="/page/"
+          isrelative="true"
+          isstatic="false"
+          lang=""
+        >
+          A link
+        </div>
+      </CustomLink>
     </LinkInner>
   </ForwardRef>
 </Provider>
@@ -34,18 +63,14 @@ exports[`<Link /> when the context provider has a lang set absolute URL's are un
     href="https://site.com/page/"
   >
     <LinkInner
+      component="a"
       href="https://site.com/page/"
       isStatic={[Function]}
       lang="en"
     >
       <a
-        data={
-          Object {
-            "isRelative": false,
-            "isStatic": false,
-          }
-        }
         href="https://site.com/page/"
+        lang="en"
       >
         A link
       </a>
@@ -62,18 +87,14 @@ exports[`<Link /> when the context provider has a lang set already language pref
     href="/en/page/"
   >
     <LinkInner
+      component="a"
       href="/en/page/"
       isStatic={[Function]}
       lang="en"
     >
       <a
-        data={
-          Object {
-            "isRelative": true,
-            "isStatic": false,
-          }
-        }
         href="/en/page/"
+        lang="en"
       >
         A link
       </a>
@@ -90,18 +111,14 @@ exports[`<Link /> when the context provider has a lang set it prefixes the URL w
     href="/page/"
   >
     <LinkInner
+      component="a"
       href="/page/"
       isStatic={[Function]}
       lang="en"
     >
       <a
-        data={
-          Object {
-            "isRelative": true,
-            "isStatic": false,
-          }
-        }
         href="/en/page/"
+        lang="en"
       >
         A link
       </a>
@@ -119,18 +136,14 @@ exports[`<Link /> when the context provider has a lang set when validation for s
     href="/non-static/page/"
   >
     <LinkInner
+      component="a"
       href="/non-static/page/"
       isStatic={[Function]}
       lang="en"
     >
       <a
-        data={
-          Object {
-            "isRelative": true,
-            "isStatic": false,
-          }
-        }
         href="/en/non-static/page/"
+        lang="en"
       >
         A link
       </a>
@@ -148,18 +161,14 @@ exports[`<Link /> when the context provider has a lang set when validation for s
     href="/images/myimage.jpeg"
   >
     <LinkInner
+      component="a"
       href="/images/myimage.jpeg"
       isStatic={[Function]}
       lang="en"
     >
       <a
-        data={
-          Object {
-            "isRelative": true,
-            "isStatic": true,
-          }
-        }
         href="/images/myimage.jpeg"
+        lang="en"
       >
         A link
       </a>
@@ -173,15 +182,11 @@ exports[`<Link /> when the provider is not used it renders correctly 1`] = `
   href="/"
 >
   <LinkInner
+    component="a"
     href="/"
+    isStatic={[Function]}
   >
     <a
-      data={
-        Object {
-          "isRelative": true,
-          "isStatic": false,
-        }
-      }
       href="/"
     >
       A link

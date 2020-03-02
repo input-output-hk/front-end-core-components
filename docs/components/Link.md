@@ -16,6 +16,7 @@ The Link component is intended to be used alongside the [Language](Language.md) 
 | lang | Current language in the URL | `String` | ✗ | - |
 | isStatic | Callback to check if a URL is static, accepts single argument of href (String) and should return a Boolean | `Function` | ✗ | (href) => false |
 | children | Child nodes | `Node` | ✓ | - |
+| component | The component to use to render the Link | `String\|Function` | ✗ | a |
 
 ### Link
 
@@ -23,6 +24,8 @@ The Link component is intended to be used alongside the [Language](Language.md) 
 | --------- | ----------- | ---- | --------- | ------------- |
 | href | The URL for the link with or without a language prefix | `String` | ✓ | - |
 | children | Child nodes | `Node` | ✓ | - |
+
+Any other props are forwarded to the component defined on the Provider.
 
 ## Usage
 
@@ -60,66 +63,12 @@ import React from 'react'
 import Link from '@input-output-hk/front-end-core-components/components/Link'
 
 export default () => (
-  <Link>
-    {({ href }) => (
-      <a href={href}>Language prefixed href when setup for language support</a>
-    )}
+  // This will render the component (by default <a />) with the
+  // normalized href
+  <Link href='/'>
+    Language prefixed href when setup for language support
   </Link>
 )
-
-```
-
-#### Expanded example
-
-The below example expands on the functionality provided by the core Link component, by rendering different components. The example assumes usage of Material UI as well as Gatsby, but you can easily swap these libraries for others. The idea is the core Link component handles href resolution.
-
-```javascript
-import React from 'react'
-import PropTypes from 'prop-types'
-import CoreLink from '@input-output-hk/front-end-core-components/components/Link'
-import { Link as GatsbyLink } from 'gatsby'
-import { Link as MUILink } from '@material-ui/core'
-
-const Link = (props) => {
-  const onClick = ({ href, relative }) => (e) => {
-    // Do some analytics here
-    props.onClick && props.onClick(e)
-  }
-
-  const getLinkProps = ({ href, static, relative, ref }) => {
-    const linkProps = {
-      ...props,
-      ref,
-      href,
-      onClick: onClick({ href, relative }),
-      component: relative && !static ? GatsbyLink : 'a'
-    }
-
-    if (relative && !static) {
-      linkProps.to = props.href
-      delete linkProps.href
-    }
-
-    return linkProps
-  }
-
-  return (
-    <CoreLink href={props.href}>
-      {({ href, static, relative, ref }) => (
-        <MUILink {...getLinkProps({ href, static, relative, ref })} />
-      )}
-    </CoreLink>
-  )
-}
-
-Link.propTypes = {
-  href: PropTypes.string.isRequired,
-  tracking: PropTypes.shape({
-    label: PropTypes.string.isRequired
-  }),
-  onClick: PropTypes.func
-}
-
 
 ```
 
