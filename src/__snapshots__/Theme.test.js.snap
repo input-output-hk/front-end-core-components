@@ -2,19 +2,16 @@
 
 exports[`Theme context <Consumer /> the consumer values are correct 1`] = `
 Object {
-  "key": undefined,
+  "key": "iohk-dark",
   "setTheme": [Function],
   "theme": Object {
-    "config": Object {
-      "colors": Object {
-        "primary": "tomato",
-        "secondary": "papayawhip",
-      },
-      "typography": Object {
-        "fontFamily": "Arial",
-      },
+    "colors": Object {
+      "primary": "tomato",
+      "secondary": "papayawhip",
     },
-    "key": "iohk-dark",
+    "typography": Object {
+      "fontFamily": "Arial",
+    },
   },
   "themes": Array [
     Object {
@@ -47,19 +44,16 @@ Object {
 
 exports[`Theme context <Consumer /> when setTheme is called the consumer values are correctly updated 1`] = `
 Object {
-  "key": undefined,
+  "key": "iohk-dark",
   "setTheme": [Function],
   "theme": Object {
-    "config": Object {
-      "colors": Object {
-        "primary": "tomato",
-        "secondary": "papayawhip",
-      },
-      "typography": Object {
-        "fontFamily": "Arial",
-      },
+    "colors": Object {
+      "primary": "tomato",
+      "secondary": "papayawhip",
     },
-    "key": "iohk-dark",
+    "typography": Object {
+      "fontFamily": "Arial",
+    },
   },
   "themes": Array [
     Object {
@@ -90,12 +84,11 @@ Object {
 }
 `;
 
-exports[`Theme context <Provider /> it renders the provider component correctly 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "setTheme": [Function],
-      "theme": Object {
+exports[`Theme context <Consumer /> when the theme is transformed it renders with the transformed theme 1`] = `
+<Provider
+  themes={
+    Array [
+      Object {
         "config": Object {
           "colors": Object {
             "primary": "tomato",
@@ -106,6 +99,117 @@ exports[`Theme context <Provider /> it renders the provider component correctly 
           },
         },
         "key": "iohk-dark",
+      },
+      Object {
+        "config": Object {
+          "colors": Object {
+            "primary": "thistle",
+            "secondary": "dodgerblue",
+          },
+          "typography": Object {
+            "fontFamily": "Helvetica",
+          },
+        },
+        "key": "iohk-light",
+      },
+    ]
+  }
+  transformTheme={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "config": Object {
+              "colors": Object {
+                "primary": "tomato",
+                "secondary": "papayawhip",
+              },
+              "typography": Object {
+                "fontFamily": "Arial",
+              },
+            },
+            "key": "iohk-dark",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "colors": Object {
+              "primary": "black",
+              "secondary": "papayawhip",
+            },
+            "typography": Object {
+              "fontFamily": "Arial",
+            },
+          },
+        },
+      ],
+    }
+  }
+>
+  <div
+    consumervalue={
+      Object {
+        "key": "iohk-dark",
+        "setTheme": [Function],
+        "theme": Object {
+          "colors": Object {
+            "primary": "black",
+            "secondary": "papayawhip",
+          },
+          "typography": Object {
+            "fontFamily": "Arial",
+          },
+        },
+        "themes": Array [
+          Object {
+            "config": Object {
+              "colors": Object {
+                "primary": "tomato",
+                "secondary": "papayawhip",
+              },
+              "typography": Object {
+                "fontFamily": "Arial",
+              },
+            },
+            "key": "iohk-dark",
+          },
+          Object {
+            "config": Object {
+              "colors": Object {
+                "primary": "thistle",
+                "secondary": "dodgerblue",
+              },
+              "typography": Object {
+                "fontFamily": "Helvetica",
+              },
+            },
+            "key": "iohk-light",
+          },
+        ],
+      }
+    }
+    id="consumer-value-holder"
+  />
+</Provider>
+`;
+
+exports[`Theme context <Provider /> it renders the provider component correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "key": "iohk-dark",
+      "setTheme": [Function],
+      "theme": Object {
+        "colors": Object {
+          "primary": "tomato",
+          "secondary": "papayawhip",
+        },
+        "typography": Object {
+          "fontFamily": "Arial",
+        },
       },
       "themes": Array [
         Object {

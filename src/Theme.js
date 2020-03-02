@@ -8,7 +8,8 @@ const Provider = ({
   children,
   themes,
   onUpdate = ({ theme, prevTheme }) => {},
-  persistTheme = true
+  persistTheme = true,
+  transformTheme = (theme) => theme.config
 }) => {
   const [ theme, updateTheme ] = useState(getInitialTheme())
 
@@ -72,12 +73,13 @@ const Provider = ({
    * @returns {Object}
    */
   function getTheme () {
-    return (themes.filter(({ key }) => key === theme).shift() || {})
+    return transformTheme(themes.filter(({ key }) => key === theme).shift() || {})
   }
 
   return (
     <ThemeContext.Provider
       value={{
+        key: theme,
         theme: getTheme(),
         setTheme,
         themes
@@ -95,7 +97,8 @@ Provider.propTypes = {
     config: PropTypes.object.isRequired
   })).isRequired,
   onUpdate: PropTypes.func,
-  persistTheme: PropTypes.bool
+  persistTheme: PropTypes.bool,
+  transformTheme: PropTypes.func
 }
 
 export {

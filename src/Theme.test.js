@@ -39,6 +39,7 @@ function getProviderWrapper ({ props = {}, renderFunction }) {
       themes={props.themes || DEFAULT_PROVIDER_PROPS.themes}
       onUpdate={props.onUpdate}
       persistTheme={props.persistTheme}
+      transformTheme={props.transformTheme}
     >
       {props.children ? props.children : DEFAULT_PROVIDER_PROPS.children}
     </Provider>
@@ -169,6 +170,45 @@ describe('Theme context', () => {
         expect(() => {
           wrapper.find('#consumer-value-holder').prop('consumervalue').setTheme('cardano')
         }).toThrow('Theme cardano does not exist')
+      })
+    })
+
+    describe('when the theme is transformed', () => {
+      let transformTheme
+      beforeEach(() => {
+        transformTheme = jest.fn((theme) => ({
+          ...theme.config,
+          colors: {
+            ...theme.config.colors,
+            primary: 'black'
+          }
+        }))
+
+        wrapper = getProviderWrapper({
+          renderFunction: mount,
+          props: {
+            transformTheme,
+            children: (
+              <Consumer>
+                {({ key, theme, setTheme, themes }) => (
+                  <div
+                    id='consumer-value-holder'
+                    consumervalue={{
+                      key,
+                      theme,
+                      setTheme,
+                      themes
+                    }}
+                  />
+                )}
+              </Consumer>
+            )
+          }
+        })
+      })
+
+      test('it renders with the transformed theme', () => {
+        expect(wrapper).toMatchSnapshot()
       })
     })
   })
