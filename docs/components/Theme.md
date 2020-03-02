@@ -100,6 +100,8 @@ const MyComponent = () => (
     {({
       key,
       theme,
+      // Un-transformed theme
+      originalTheme,
       setTheme,
       themes
     }) => (
