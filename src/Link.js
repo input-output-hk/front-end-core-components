@@ -22,7 +22,10 @@ Provider.propTypes = {
 const LinkInner = (props) => {
   // Transform original href to prefix language where applicable
   function getHref () {
-    if (props.lang && isRelative(props.href) && !props.isStatic(props.href) && props.href.substring(1, props.lang.length + 1) !== props.lang) return `/${props.lang}${props.href}`
+    if (props.lang && isRelative(props.href) && !props.isStatic(props.href) && !props.href.match(new RegExp(`^/${props.lang}(/?|/.*)$`))) {
+      return `/${props.lang}${props.href}`
+    }
+
     return props.href
   }
 

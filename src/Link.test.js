@@ -34,6 +34,18 @@ describe('<Link />', () => {
       expect(getWrapper({ providerProps: { lang }, props: { href: '/page/' } })).toMatchSnapshot()
     })
 
+    test('/enter/ is still prefixed by the language', () => {
+      expect(getWrapper({ providerProps: { lang }, props: { href: '/enter/' } })).toMatchSnapshot()
+    })
+
+    test('/en is not prefixed by the language', () => {
+      expect(getWrapper({ providerProps: { lang }, props: { href: '/en' } })).toMatchSnapshot()
+    })
+
+    test('/en/ is not prefixed by the language', () => {
+      expect(getWrapper({ providerProps: { lang }, props: { href: '/en/' } })).toMatchSnapshot()
+    })
+
     test('already language prefixed URL\'s are unaffected', () => {
       expect(getWrapper({ providerProps: { lang }, props: { href: '/en/page/' } })).toMatchSnapshot()
     })
