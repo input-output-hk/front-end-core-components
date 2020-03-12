@@ -55,6 +55,78 @@ exports[`<Link /> when a custom component is used it renders correctly 1`] = `
 </Provider>
 `;
 
+exports[`<Link /> when the context provider has a lang set /en is not prefixed by the language 1`] = `
+<Provider
+  lang="en"
+>
+  <ForwardRef
+    href="/en"
+  >
+    <LinkInner
+      component="a"
+      href="/en"
+      isStatic={[Function]}
+      lang="en"
+    >
+      <a
+        href="/en"
+        lang="en"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when the context provider has a lang set /en/ is not prefixed by the language 1`] = `
+<Provider
+  lang="en"
+>
+  <ForwardRef
+    href="/en/"
+  >
+    <LinkInner
+      component="a"
+      href="/en/"
+      isStatic={[Function]}
+      lang="en"
+    >
+      <a
+        href="/en/"
+        lang="en"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
+exports[`<Link /> when the context provider has a lang set /enter/ is still prefixed by the language 1`] = `
+<Provider
+  lang="en"
+>
+  <ForwardRef
+    href="/enter/"
+  >
+    <LinkInner
+      component="a"
+      href="/enter/"
+      isStatic={[Function]}
+      lang="en"
+    >
+      <a
+        href="/en/enter/"
+        lang="en"
+      >
+        A link
+      </a>
+    </LinkInner>
+  </ForwardRef>
+</Provider>
+`;
+
 exports[`<Link /> when the context provider has a lang set absolute URL's are unaffected 1`] = `
 <Provider
   lang="en"
