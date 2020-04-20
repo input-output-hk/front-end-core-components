@@ -7,6 +7,7 @@ exports[`<Link /> it renders correctly with minimal props 1`] = `
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="/"
       isStatic={[Function]}
       lang=""
@@ -31,6 +32,7 @@ exports[`<Link /> when a custom component is used it renders correctly 1`] = `
   >
     <LinkInner
       component={[Function]}
+      elRef={null}
       href="/page/"
       isStatic={[Function]}
       lang=""
@@ -64,6 +66,7 @@ exports[`<Link /> when the context provider has a lang set /en is not prefixed b
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="/en"
       isStatic={[Function]}
       lang="en"
@@ -88,6 +91,7 @@ exports[`<Link /> when the context provider has a lang set /en/ is not prefixed 
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="/en/"
       isStatic={[Function]}
       lang="en"
@@ -112,6 +116,7 @@ exports[`<Link /> when the context provider has a lang set /enter/ is still pref
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="/enter/"
       isStatic={[Function]}
       lang="en"
@@ -136,6 +141,7 @@ exports[`<Link /> when the context provider has a lang set absolute URL's are un
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="https://site.com/page/"
       isStatic={[Function]}
       lang="en"
@@ -160,6 +166,7 @@ exports[`<Link /> when the context provider has a lang set already language pref
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="/en/page/"
       isStatic={[Function]}
       lang="en"
@@ -184,6 +191,7 @@ exports[`<Link /> when the context provider has a lang set it prefixes the URL w
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="/page/"
       isStatic={[Function]}
       lang="en"
@@ -209,6 +217,7 @@ exports[`<Link /> when the context provider has a lang set when validation for s
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="/non-static/page/"
       isStatic={[Function]}
       lang="en"
@@ -234,6 +243,7 @@ exports[`<Link /> when the context provider has a lang set when validation for s
   >
     <LinkInner
       component="a"
+      elRef={null}
       href="/images/myimage.jpeg"
       isStatic={[Function]}
       lang="en"
@@ -255,6 +265,7 @@ exports[`<Link /> when the provider is not used it renders correctly 1`] = `
 >
   <LinkInner
     component="a"
+    elRef={null}
     href="/"
     isStatic={[Function]}
   >

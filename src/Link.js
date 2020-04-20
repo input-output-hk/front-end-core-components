@@ -16,7 +16,7 @@ Provider.propTypes = {
   children: PropTypes.node.isRequired,
   lang: PropTypes.string,
   isStatic: PropTypes.func,
-  component: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])
+  component: PropTypes.any
 }
 
 const LinkInner = (props) => {
@@ -37,21 +37,23 @@ const LinkInner = (props) => {
     isRelative: isRelative(props.href)
   }
 
+  const ref = componentProps.elRef
   delete componentProps.component
+  delete componentProps.elRef
   if (typeof Component === 'string') {
     delete componentProps.isStatic
     delete componentProps.isRelative
   }
 
   return (
-    <Component {...componentProps} />
+    <Component {...componentProps} ref={ref} />
   )
 }
 
 const Link = forwardRef((props, ref) => (
   <LinkContext.Consumer>
     {({ lang, isStatic = () => false, component = 'a' } = {}) => (
-      <LinkInner {...props} ref={ref} lang={lang} isStatic={isStatic} component={component} />
+      <LinkInner {...props} elRef={ref} lang={lang} isStatic={isStatic} component={component} />
     )}
   </LinkContext.Consumer>
 ))
@@ -60,8 +62,8 @@ LinkInner.propTypes = {
   href: PropTypes.string.isRequired,
   lang: PropTypes.string,
   isStatic: PropTypes.func,
-  ref: PropTypes.any,
-  component: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])
+  elRef: PropTypes.any,
+  component: PropTypes.any
 }
 
 Link.propTypes = {
