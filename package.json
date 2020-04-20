@@ -1,6 +1,6 @@
 {
   "name": "@input-output-hk/front-end-core-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "IOHK front-end web core React components",
   "main": "components/index.js",
   "scripts": {
