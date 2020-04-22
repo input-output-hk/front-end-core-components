@@ -100,10 +100,8 @@ const Head = ({
       title={completeHeadData.title}
       meta={completeHeadData.meta}
     >
-      <>
-        {lang && <html lang={lang} />}
-        {children}
-      </>
+      {lang && <html lang={lang} />}
+      {children}
     </Helmet>
   )
 }
