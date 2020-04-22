@@ -31,6 +31,7 @@ const UploadCareImage = ({ src, sizeFactor = 1, alt, maintainTransparency, compo
       <source
         srcSet={breakpoints.map(breakpoint => `${imageSrc}-/resize/${Math.round(Math.min(3000, breakpoint * sizeFactor))}/ ${Math.round(breakpoint * sizeFactor)}w`).join(', ')}
         sizes={breakpoints.map(breakpoint => `(max-width: ${breakpoint}px) ${Math.round(breakpoint * sizeFactor)}px`).concat('100vw').join(', ')}
+        type={type}
       />
     )
   }
