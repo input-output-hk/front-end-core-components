@@ -68,7 +68,7 @@ function getHeadData ({ component, page, site, availableLocales, locale, url }) 
   })
 
   return {
-    title: componentMeta.title || filteredPage.title || site.title,
+    title: component.title || filteredPage.title || site.title,
     meta: meta.map(tag => {
       if (tag.name.match(/^og:/)) return { property: tag.name, content: tag.content }
       return tag
