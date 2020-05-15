@@ -19,7 +19,7 @@ Provider.propTypes = {
   component: PropTypes.any
 }
 
-const LinkInner = (props) => {
+const LinkInner = forwardRef((props, ref) => {
   // Transform original href to prefix language where applicable
   function getHref () {
     if (props.lang && isRelative(props.href) && !props.isStatic(props.href) && !props.href.match(new RegExp(`^/${props.lang}(/?|/.*)$`))) {
@@ -37,9 +37,7 @@ const LinkInner = (props) => {
     isRelative: isRelative(props.href)
   }
 
-  const ref = componentProps.elRef
   delete componentProps.component
-  delete componentProps.elRef
   if (typeof Component === 'string') {
     delete componentProps.isStatic
     delete componentProps.isRelative
@@ -48,12 +46,12 @@ const LinkInner = (props) => {
   return (
     <Component {...componentProps} ref={ref} />
   )
-}
+})
 
 const Link = forwardRef((props, ref) => (
   <LinkContext.Consumer>
     {({ lang, isStatic = () => false, component = 'a' } = {}) => (
-      <LinkInner {...props} elRef={ref} lang={lang} isStatic={isStatic} component={component} />
+      <LinkInner {...props} ref={ref} lang={lang} isStatic={isStatic} component={component} />
     )}
   </LinkContext.Consumer>
 ))
