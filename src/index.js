@@ -1,15 +1,15 @@
 import Head from './Head'
-import Image from './Image'
 import Language from './Language'
 import Link from './Link'
 import Markdown from './Markdown'
 import Theme from './Theme'
+import Image from './LazyImageComponent'
 
 export {
   Head,
-  Image,
   Language,
   Link,
   Markdown,
-  Theme
+  Theme,
+  Image
 }
