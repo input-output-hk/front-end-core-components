@@ -14,8 +14,9 @@ const Provider = ({
   const [ theme, updateTheme ] = useState(getInitialTheme())
 
   useEffect(() => {
-    persistToLocalStorage(theme)
-    onUpdate({ theme, prevTheme: null })
+    const localTheme = getInitialTheme()
+    persistToLocalStorage(localTheme)
+    onUpdate({ theme: localTheme, prevTheme: null })
   }, [])
 
   /**
